@@ -45,8 +45,8 @@ li {
 }
 
 #card {
-  width: 61vh;
-  height: 45vh;
+  width: 49em;
+  height: 35em;
   margin: 15vh auto;
   box-shadow: 0px 0px 20px 5px #d4d4d4;
   background-color: white;
@@ -108,7 +108,7 @@ button {
   height: 50px;
   font-size: 1.2rem;
   margin-top: 40px;
-  box-shadow: 0px 0px 20px 1px #949494ae;
+  box-shadow: 0px 10px 10px 1px #27a09e;
 }
 
 button:hover {
