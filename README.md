@@ -1,1 +1,4 @@
-My learning projects for web development.
+## My learning projects for web development.
+
+1. [Mentor CSS "Pricing Card" challange](https://dexoteric.github.io/learning-projects-for-web-dev/zachg-mentor-css-pricing-card-challange/index.html)
+2. [Mentor CSS Flexbox "Testimonial" challange](https://dexoteric.github.io/learning-projects-for-web-dev/zachg-mentor-css-flexbox-testimonials-challange/index.html)
