@@ -12,6 +12,44 @@ SHARED STYLES
 
 html {
   font-family: "Dosis", sans-serif;
+  font-size: 16px;
+  color: #1e4040;
+}
+
+body {
+  min-width: 375px;
+}
+
+a {
+  color: #71d99e;
+}
+
+img {
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+
+header,
+footer {
+  background-color: #1e4040;
+  color: #71d99e;
+}
+
+main,
+aside {
+  padding: 30px 20px;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
 }
 
 /* 
@@ -42,12 +80,10 @@ CSS OUTER GRID STYLES
 
 header {
   grid-area: alias-header;
-  background-color: rgba(0, 31, 255, 0.5);
 }
 
 nav {
   grid-area: alias-nav;
-  background-color: rgba(0, 31, 255, 0.8);
 }
 
 /* 
@@ -60,7 +96,6 @@ CSS INNER GRID STYLES
   overflow-y: scroll;
   display: grid;
   grid-area: alias-innergrid;
-  background-color: rgba(0, 31, 255, 0.2);
   grid-template-rows: 1fr auto 60px;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -71,17 +106,151 @@ CSS INNER GRID STYLES
 
 main {
   grid-area: alias-main;
-  background-color: rgba(255, 122, 0);
 }
 
 aside {
   grid-area: alias-aside;
-  background-color: rgba(255, 122, 0, 0.4);
 }
 
 footer {
   grid-area: alias-footer;
-  background-color: rgba(255, 122, 0, 0.7);
+}
+
+/* 
+===============================================
+HEADER STYLES
+===============================================
+*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+}
+
+.fa-bars {
+  margin-right: 20px;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.right-header {
+  display: flex;
+}
+
+.header-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.header-link i {
+  font-size: 0.8rem;
+}
+
+/* 
+===============================================
+NAV STYLES
+===============================================
+*/
+
+nav {
+  padding-top: 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.nav-link a {
+  color: #1e4040;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* 
+===============================================
+SIDEBAR STYLES
+===============================================
+*/
+
+aside {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 
+===============================================
+FOOTERSTYLES
+===============================================
+*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* 
+===============================================
+COLLAGE
+===============================================
+*/
+
+.collage {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 40px 1fr 40px 1fr;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.collage * {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.collage-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  z-index: 1;
+  transform: rotate(-3deg);
+}
+
+.collage-2 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  z-index: 2;
+  box-shadow: 2px 4px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.collage-3 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  z-index: 1;
+  transform: rotate(3deg);
 }
 
 /* 
@@ -114,7 +283,41 @@ BREAKPOINTS
       "alias-main alias-aside"
       "alias-footer alias-footer";
   }
+
+  aside {
+    border-top: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
 
 @media (min-width: 1440px) {
+  .outer-grid {
+    grid-template-columns: 1fr 950px 1fr;
+    grid-template-areas:
+      "alias-header alias-header alias-header"
+      "alias-nav alias-innergrid alias-innegrid";
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 950px 1fr;
+    grid-template-areas: "alias-lh . alias-rh";
+  }
+
+  .left-header {
+    grid-area: alias-lh;
+    justify-self: end;
+  }
+
+  .right-header {
+    grid-area: alias-rh;
+    justify-self: start;
+  }
+
+  nav {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+  }
 }
