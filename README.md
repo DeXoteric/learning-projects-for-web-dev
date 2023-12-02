@@ -7,4 +7,4 @@
 5. reserved
 6. reserved
 7. Tutorials from [Kenny Yip Coding](https://www.youtube.com/@KennyYipCoding) channel.
-    a. [2048](https://dexoteric.github.io/learning-projects-for-web-dev/2048-game-from-Kenny-Yip-Coding/index.html)
+        a. [2048](https://dexoteric.github.io/learning-projects-for-web-dev/2048-game-from-Kenny-Yip-Coding/index.html)
